@@ -1,0 +1,101 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BYTESERVER_OS	byteserver/Makefile	/^BYTESERVER_OS = $(patsubst %.cpp,%.o, $(wildcard *.cpp))$/;"	m
+CHUNKFILE_H	byteserver/chunkfile.h	25;"	d
+ChunkDataFileSize	byteserver/chunkfile.h	/^		const static int ChunkDataFileSize = 100 * 1024 * 1024;		\/\/ 100MB默认空间大小$/;"	m	class:com::personal::file::ChunkFile
+ChunkFile	byteserver/chunkfile.h	/^		ChunkFile(): state(ChunkFileClosed), type(InvalidChunkFileType)$/;"	f	class:com::personal::file::ChunkFile
+ChunkFile	byteserver/chunkfile.h	/^class ChunkFile {$/;"	c	namespace:com::personal::file
+ChunkFileAppendOnly	byteserver/chunkfile.h	/^	ChunkFileClosed, ChunkFileReadOnly, ChunkFileAppendOnly$/;"	e	enum:com::personal::file::FileState
+ChunkFileClosed	byteserver/chunkfile.h	/^	ChunkFileClosed, ChunkFileReadOnly, ChunkFileAppendOnly$/;"	e	enum:com::personal::file::FileState
+ChunkFileReadOnly	byteserver/chunkfile.h	/^	ChunkFileClosed, ChunkFileReadOnly, ChunkFileAppendOnly$/;"	e	enum:com::personal::file::FileState
+ChunkFileSpaceNotEnough	gen-cpp/ErrorCode_types.h	/^    ChunkFileSpaceNotEnough = -10002,$/;"	e	enum:com::personal::sfs::common::ErrorCode::type
+ChunkFileWriteBufferSize	byteserver/chunkfile.h	/^		const static int ChunkFileWriteBufferSize = 16 * 1024; 		\/\/ 16K写入缓冲区$/;"	m	class:com::personal::file::ChunkFile
+ChunkIndexFileSize	byteserver/chunkfile.h	/^		const static int ChunkIndexFileSize = 100 * 1024 * 1024;	\/\/ Index文件100MB默认空间大小$/;"	m	class:com::personal::file::ChunkFile
+CreateDirectoryError	gen-cpp/ErrorCode_types.h	/^    CreateDirectoryError = -10004$/;"	e	enum:com::personal::sfs::common::ErrorCode::type
+DataChunkFileType	byteserver/chunkfile.h	/^	InvalidChunkFileType, DataChunkFileType, IndexChunkFileType$/;"	e	enum:com::personal::file::FileType
+Error	gen-cpp/ErrorCode_types.h	/^  Error() : seq(0), title(), message() {$/;"	f	class:com::personal::sfs::common::Error
+Error	gen-cpp/ErrorCode_types.h	/^class Error {$/;"	c	namespace:com::personal::sfs::common
+ErrorCode	gen-cpp/ErrorCode_types.h	/^struct ErrorCode {$/;"	s	namespace:com::personal::sfs::common
+ErrorCodeConstants	gen-cpp/ErrorCode_constants.cpp	/^ErrorCodeConstants::ErrorCodeConstants() {$/;"	f	class:com::personal::sfs::common::ErrorCodeConstants
+ErrorCodeConstants	gen-cpp/ErrorCode_constants.h	/^class ErrorCodeConstants {$/;"	c	namespace:com::personal::sfs::common
+ErrorCode_CONSTANTS_H	gen-cpp/ErrorCode_constants.h	8;"	d
+ErrorCode_TYPES_H	gen-cpp/ErrorCode_types.h	8;"	d
+FileState	byteserver/chunkfile.h	/^enum FileState {$/;"	g	namespace:com::personal::file
+FileType	byteserver/chunkfile.h	/^enum FileType {$/;"	g	namespace:com::personal::file
+IndexChunkFileType	byteserver/chunkfile.h	/^	InvalidChunkFileType, DataChunkFileType, IndexChunkFileType$/;"	e	enum:com::personal::file::FileType
+InvalidChunkFileType	byteserver/chunkfile.h	/^	InvalidChunkFileType, DataChunkFileType, IndexChunkFileType$/;"	e	enum:com::personal::file::FileType
+InvalidFileOffset	gen-cpp/ErrorCode_types.h	/^    InvalidFileOffset = -10003,$/;"	e	enum:com::personal::sfs::common::ErrorCode::type
+OpenFileError	gen-cpp/ErrorCode_types.h	/^    OpenFileError = -10001,$/;"	e	enum:com::personal::sfs::common::ErrorCode::type
+SfsException	common/sfs_exception.h	/^class SfsException: public std::exception$/;"	c	namespace:com::personal::sfs
+Success	gen-cpp/ErrorCode_types.h	/^    Success = 0,$/;"	e	enum:com::personal::sfs::common::ErrorCode::type
+TARGET	byteserver/Makefile	/^TARGET = $(OUTPUT_PATH)\/byteserver$/;"	m
+TARGET	gen-cpp/Makefile	/^TARGET = $(OUTPUT_PATH)\/libsfsthrift.a$/;"	m
+_Error__isset	gen-cpp/ErrorCode_types.h	/^  _Error__isset() : seq(false), title(false), message(false) {}$/;"	f	struct:com::personal::sfs::common::_Error__isset
+_Error__isset	gen-cpp/ErrorCode_types.h	/^typedef struct _Error__isset {$/;"	s	namespace:com::personal::sfs::common
+_Error__isset	gen-cpp/ErrorCode_types.h	/^} _Error__isset;$/;"	t	namespace:com::personal::sfs::common	typeref:struct:com::personal::sfs::common::_Error__isset
+__isset	gen-cpp/ErrorCode_types.h	/^  _Error__isset __isset;$/;"	m	class:com::personal::sfs::common::Error
+__set_message	gen-cpp/ErrorCode_types.h	/^  void __set_message(const std::string& val) {$/;"	f	class:com::personal::sfs::common::Error
+__set_seq	gen-cpp/ErrorCode_types.h	/^  void __set_seq(const int32_t val) {$/;"	f	class:com::personal::sfs::common::Error
+__set_title	gen-cpp/ErrorCode_types.h	/^  void __set_title(const std::string& val) {$/;"	f	class:com::personal::sfs::common::Error
+_kErrorCodeNames	gen-cpp/ErrorCode_types.cpp	/^const char* _kErrorCodeNames[] = {$/;"	m	namespace:com::personal::sfs::common	file:
+_kErrorCodeValues	gen-cpp/ErrorCode_types.cpp	/^int _kErrorCodeValues[] = {$/;"	m	namespace:com::personal::sfs::common	file:
+ascii_fingerprint	gen-cpp/ErrorCode_types.cpp	/^const char* Error::ascii_fingerprint = "3368C2F81F2FEF71F11EDACDB2A3ECEF";$/;"	m	class:com::personal::sfs::common::Error	file:
+ascii_fingerprint	gen-cpp/ErrorCode_types.h	/^  static const char* ascii_fingerprint; \/\/ = "3368C2F81F2FEF71F11EDACDB2A3ECEF";$/;"	m	class:com::personal::sfs::common::Error
+availableCapacity	byteserver/chunkfile.cpp	/^int ChunkFile::availableCapacity()const$/;"	f	class:ChunkFile
+binary_fingerprint	gen-cpp/ErrorCode_types.cpp	/^const uint8_t Error::binary_fingerprint[16] = {0x33,0x68,0xC2,0xF8,0x1F,0x2F,0xEF,0x71,0xF1,0x1E,0xDA,0xCD,0xB2,0xA3,0xEC,0xEF};$/;"	m	class:com::personal::sfs::common::Error	file:
+binary_fingerprint	gen-cpp/ErrorCode_types.h	/^  static const uint8_t binary_fingerprint[16]; \/\/ = {0x33,0x68,0xC2,0xF8,0x1F,0x2F,0xEF,0x71,0xF1,0x1E,0xDA,0xCD,0xB2,0xA3,0xEC,0xEF};$/;"	m	class:com::personal::sfs::common::Error
+com	byteserver/chunkfile.h	/^namespace com$/;"	n
+com	common/sfs_exception.h	/^namespace com$/;"	n
+com	gen-cpp/ErrorCode_constants.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	file:
+com	gen-cpp/ErrorCode_constants.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n
+com	gen-cpp/ErrorCode_types.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	file:
+com	gen-cpp/ErrorCode_types.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n
+common	gen-cpp/ErrorCode_constants.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal::sfs	file:
+common	gen-cpp/ErrorCode_constants.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal::sfs
+common	gen-cpp/ErrorCode_types.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal::sfs	file:
+common	gen-cpp/ErrorCode_types.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal::sfs
+file	byteserver/chunkfile.h	/^namespace file$/;"	n	namespace:com::personal
+fileSize	byteserver/chunkfile.h	/^		int fileSize;$/;"	m	class:com::personal::file::ChunkFile
+filename	byteserver/chunkfile.h	/^		std::string filename;$/;"	m	class:com::personal::file::ChunkFile
+flush	byteserver/chunkfile.cpp	/^bool ChunkFile::flush()$/;"	f	class:ChunkFile
+g_ErrorCode_constants	gen-cpp/ErrorCode_constants.cpp	/^const ErrorCodeConstants g_ErrorCode_constants;$/;"	m	namespace:com::personal::sfs::common	file:
+initFile	byteserver/chunkfile.cpp	/^int ChunkFile::initFile(const std::string& filename, int allocateSize, bool fillZero)$/;"	f	class:ChunkFile
+main	byteserver/byteserver.cpp	/^int main()$/;"	f
+message	gen-cpp/ErrorCode_types.h	/^  bool message;$/;"	m	struct:com::personal::sfs::common::_Error__isset
+message	gen-cpp/ErrorCode_types.h	/^  std::string message;$/;"	m	class:com::personal::sfs::common::Error
+open	byteserver/chunkfile.cpp	/^int ChunkFile::open(const std::string &filename, const FileType& fileType, const FileState& fileState)$/;"	f	class:ChunkFile
+operator !=	gen-cpp/ErrorCode_types.h	/^  bool operator != (const Error &rhs) const {$/;"	f	class:com::personal::sfs::common::Error
+operator ==	gen-cpp/ErrorCode_types.h	/^  bool operator == (const Error & rhs) const$/;"	f	class:com::personal::sfs::common::Error
+personal	byteserver/chunkfile.h	/^namespace personal$/;"	n	namespace:com
+personal	common/sfs_exception.h	/^namespace personal$/;"	n	namespace:com
+personal	gen-cpp/ErrorCode_constants.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com	file:
+personal	gen-cpp/ErrorCode_constants.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com
+personal	gen-cpp/ErrorCode_types.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com	file:
+personal	gen-cpp/ErrorCode_types.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com
+read	byteserver/chunkfile.cpp	/^uint32_t ChunkFile::read(char buffer[], int count)$/;"	f	class:ChunkFile
+read	byteserver/chunkfile.cpp	/^uint32_t ChunkFile::read(int offset, char buffer[], int count)$/;"	f	class:ChunkFile
+read	gen-cpp/ErrorCode_types.cpp	/^uint32_t Error::read(::apache::thrift::protocol::TProtocol* iprot) {$/;"	f	class:com::personal::sfs::common::Error
+seq	gen-cpp/ErrorCode_types.h	/^  bool seq;$/;"	m	struct:com::personal::sfs::common::_Error__isset
+seq	gen-cpp/ErrorCode_types.h	/^  int32_t seq;$/;"	m	class:com::personal::sfs::common::Error
+sfs	common/sfs_exception.h	/^namespace sfs$/;"	n	namespace:com::personal
+sfs	gen-cpp/ErrorCode_constants.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal	file:
+sfs	gen-cpp/ErrorCode_constants.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal
+sfs	gen-cpp/ErrorCode_types.cpp	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal	file:
+sfs	gen-cpp/ErrorCode_types.h	/^namespace com { namespace personal { namespace sfs { namespace common {$/;"	n	namespace:com::personal
+state	byteserver/chunkfile.h	/^		enum FileState state;$/;"	m	class:com::personal::file::ChunkFile	typeref:enum:com::personal::file::ChunkFile::FileState
+stream	byteserver/chunkfile.h	/^		std::fstream stream;$/;"	m	class:com::personal::file::ChunkFile
+swap	gen-cpp/ErrorCode_types.cpp	/^void swap(Error &a, Error &b) {$/;"	f	namespace:com::personal::sfs::common
+tellg	byteserver/chunkfile.cpp	/^uint64_t ChunkFile::tellg()const$/;"	f	class:ChunkFile
+tellp	byteserver/chunkfile.cpp	/^uint64_t ChunkFile::tellp()const$/;"	f	class:ChunkFile
+title	gen-cpp/ErrorCode_types.h	/^  bool title;$/;"	m	struct:com::personal::sfs::common::_Error__isset
+title	gen-cpp/ErrorCode_types.h	/^  std::string title;$/;"	m	class:com::personal::sfs::common::Error
+type	byteserver/chunkfile.h	/^		enum FileType type;$/;"	m	class:com::personal::file::ChunkFile	typeref:enum:com::personal::file::ChunkFile::FileType
+type	gen-cpp/ErrorCode_types.h	/^  enum type {$/;"	g	struct:com::personal::sfs::common::ErrorCode
+write	byteserver/chunkfile.cpp	/^uint32_t ChunkFile::write(char buffer[], int count)$/;"	f	class:ChunkFile
+write	byteserver/chunkfile.cpp	/^uint32_t ChunkFile::write(int offset, char buffer[], int count)$/;"	f	class:ChunkFile
+write	gen-cpp/ErrorCode_types.cpp	/^uint32_t Error::write(::apache::thrift::protocol::TProtocol* oprot) const {$/;"	f	class:com::personal::sfs::common::Error
+~Error	gen-cpp/ErrorCode_types.h	/^  virtual ~Error() throw() {}$/;"	f	class:com::personal::sfs::common::Error
