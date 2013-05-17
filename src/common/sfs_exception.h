@@ -21,6 +21,7 @@
 
 #include <exception>
 #include <string>
+#include <sstream>
 
 #include <gen-cpp/ErrorCode_constants.h>
 

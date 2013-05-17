@@ -16,9 +16,16 @@
  * =====================================================================================
  */
 
-#include <common/sfs_utils.h>
 #ifndef SFS_COMMON_H
 #define SFS_COMMON_H
+
+#include <glog/logging.h>
+
+#include <common/sfs_exception.h>
+#include <common/virtualfolder.h>
+#include <common/virtualfile.h>
+
+#define SFS_NS_COMMON com::personal::sfs::common
 
 namespace com
 {
@@ -28,10 +35,10 @@ namespace sfs
 {
 namespace common
 {
-#define SFS_NS_COMMON		com::personal::sfs::common
+
 }
 }
 }
-}
+}	// end of namespaces
 
 #endif

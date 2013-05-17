@@ -17,7 +17,11 @@ INCLUDES += -I../../src/byteserver
 TARGET = $(OUTPUT_PATH)/test_datanode
 
 $(TARGET): $(LOCAL_OBJS)
-	$(LTOOL) -o $@ $< $(DEP_OBJS) $(LTOOLFLAGS) $(LDFLAGS) $(CPPFLAGS) $(ALL_LIBS)
+	echo $(LOCAL_OBJS)
+	$(LTOOL) -o $@ $(LOCAL_OBJS) $(DEP_OBJS) $(LTOOLFLAGS) $(LDFLAGS) $(CPPFLAGS) $(ALL_LIBS)
+
+#boost_test: boost_test.o
+#	$(LTOOL) -o $@ $< $(LTOOLFLAGS) $(LDFLAGS) $(CPPFLAGS) $(ALL_LIBS)
 
 .PHONY: clean
 clean:

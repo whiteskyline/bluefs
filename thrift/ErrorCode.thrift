@@ -23,8 +23,12 @@ enum ErrorCode {
 	ChunkFileSpaceNotEnough = -10002,
 	InvalidFileOffset = -10003,
 	CreateDirectoryError = -10004,
+	WriteFileError = -10005,
 
 	# 参数错误等等
-	InvalidArgu = -20001	
+	InvalidArgu = -20001,
+	
+	# 严重错误
+	InvalidEnvConfig = -90001
 
 }

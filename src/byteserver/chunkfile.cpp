@@ -37,7 +37,7 @@ using namespace boost::system;
 using namespace boost::filesystem;
 
 using namespace com::personal::sfs::common;
-using namespace com::personal::file;
+using namespace com::personal::sfs::file;
 
 int ChunkFile::open(const std::string &filename, const FileType& fileType, const FileState& fileState)throw (SFS_NS_COMMON::SfsException)
 {
@@ -185,38 +185,41 @@ int32_t ChunkFile::write(char buffer[], int count)
 		if (buffer == NULL || count <=0)
 		{
 			LOG(ERROR) << "invalid argument buffer:" << buffer << " count:" << count;
-			return -1;
-		}		
+			SfsUtil::throw_except(ErrorCode::InvalidArgu, "buffer is null");
+		}
 
 		try {
 				int availPos = availableCapacity();
 				if (availPos < count)
 				{
 						LOG(ERROR) << "cannot write to:" << filename << " cause file space not enough, " << availPos << " only" ;
-						return ErrorCode::ChunkFileSpaceNotEnough;
+						SfsUtil::throw_except(ErrorCode::ChunkFileSpaceNotEnough, "not enough space left");
 				}
 
 				stream.write(buffer, count);
 				return count;
 		} catch (ios_base::failure & e) {
 				LOG(ERROR) << "write to file error: " << e.what();
-				return -1; 
+				SfsUtil::throw_except(ErrorCode::WriteFileError, "invalid offset");
 		}
+
+		// never reached
+		return 0;
 }
 
 int32_t ChunkFile::write(int offset, char buffer[], int count)
 {
-		
+
 		if (buffer == NULL)
 		{
 			LOG(ERROR) << "null buffer";
-			return -1;
+			SfsUtil::throw_except(ErrorCode::InvalidArgu, "buffer is null");
 		}
 
 		if (offset < 0 || offset + count >= fileSize || count <= 0)
 		{
-				LOG(ERROR) << "invalid write offset:" << offset << ", filesize is:" << fileSize; 
-				return -1;
+				LOG(ERROR) << "invalid write offset:" << offset << ", filesize is:" << fileSize;
+				SfsUtil::throw_except(ErrorCode::InvalidArgu, "wrong offset and count");
 		}
 
 		try {
@@ -225,8 +228,8 @@ int32_t ChunkFile::write(int offset, char buffer[], int count)
 						stream.seekp(offset, std::ios_base::beg);
 						if (!stream)
 						{
-								LOG(ERROR) << "failured to seekp " << filename;
-								return -1;
+								LOG(ERROR) << "failured to seekp " << filename << " to " << offset;
+								SfsUtil::throw_except(ErrorCode::InvalidFileOffset, "invalid offset");
 						}
 				}
 
@@ -234,8 +237,12 @@ int32_t ChunkFile::write(int offset, char buffer[], int count)
 				return count;
 		} catch (ios_base::failure & e) {
 				LOG(ERROR) << "ios_base::failure catched! " << e.what();
-				return -1;
+				SfsUtil::throw_except(ErrorCode::WriteFileError, "invalid offset");
 		}
+
+		// never reached
+		return 0;
+
 }
 
 bool ChunkFile::flush()
@@ -296,7 +303,7 @@ int ChunkFile::initFile(const std::string& filename, int allocateSize, bool fill
 		if (success) {
 				if (posix_fallocate(fd, 0, allocateSize) < 0)
 				{
-						LOG(ERROR) << "fallocate file space failed, check disk space"; 
+						LOG(ERROR) << "fallocate file space failed, check disk space";
 						success = false;
 				}
 				else
